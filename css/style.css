@@ -48,7 +48,7 @@ body{
     margin: 0;
     font-family: 'Futura PT' , 'Arial' ,sans-serif;
     background-image: linear-gradient( to bottom , rgba( 9 ,9, 9, 0.1) , rgba( 9 ,9, 9, 0.1)) ,
-     url('../images/bg.jpg');
+    url('../images/bg.jpg');
     background-repeat: no-repeat;
     background-position: center top;
 }
@@ -91,6 +91,7 @@ body{
     line-height: 18px;
     display: flex;
     align-items: center;
+    white-space: nowrap;
     color: #333333;
 }
 
@@ -100,7 +101,7 @@ body{
     display: inline-block;
     margin-right: 9px;
     content: '';
-    background-image: url('../images/home-icon.svg');
+    background-image: url('../images/home-icon.png');
     background-repeat: no-repeat;
     background-position: center center;
 }
@@ -120,7 +121,7 @@ body{
     height: 13px;
     content: '';
     display: inline-block;
-    background-image: url('../images/tel-icon.svg');
+    background-image: url('../images/tel-icon.png');
     background-repeat: no-repeat;
     background-position: center center;
     margin-right: 9px;
@@ -150,6 +151,7 @@ body{
     line-height: 18px;
     text-decoration: none;
     color: #333333;
+    white-space: nowrap;
     transition: color 0.5s ease;
 }
 .company_telnumber-link:hover{
@@ -166,6 +168,7 @@ body{
     align-items: center;
     justify-content: center;
     margin-left: 98px;
+    white-space: nowrap;
 }
 
 .company_worktime::before{
@@ -173,7 +176,7 @@ body{
     content: '';
     height: 14px;
     width: 14px;
-    background-image: url('../images/calendar-icon.svg');
+    background-image: url('../images/calendar-icon.png');
     margin-right: 7px;
     background-repeat: no-repeat;
     background-position: center center;
@@ -210,9 +213,7 @@ body{
     
 }
 
-.site_nav .container{
-    
-}
+
 
 .site-logo-link{
     position: absolute;
@@ -259,7 +260,7 @@ body{
 }
 
 .site_nav-item-link-active{
-    background-image: url('../images/fish-icon.svg');
+    background-image: url('../images/fish-icon.png');
     background-repeat: no-repeat;
     background-size: 14px 14px;
     background-position: center left 2.5px;
@@ -303,7 +304,7 @@ body{
     content: '';
     width: 23px;
     height: 21px;
-    background-image: url('../images/pet.svg');
+    background-image: url('../images/pet.png');
     display: inline-block;
     background-repeat: no-repeat;
     background-size: 23px 21px;
@@ -635,6 +636,7 @@ body{
     color: #FFFFFF;
     border-radius: 3px;
     display: inline-block;
+    text-decoration: none;
     padding: 15px 36px 16px 63px;
     background-image: url('../images/money.svg');
     background-repeat: no-repeat;
@@ -658,4 +660,118 @@ body{
 }
 .buttons-div .btn:hover{
     color: #fff;
+}
+
+.site-form .container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.company-location-image {
+    display: block;
+}
+
+.site-form-div{
+    height: 652px;
+    background-image: url('../images/fishes.png'), linear-gradient(to left , rgba(2,2,2,0.6) , rgba(2,2,2,0.6))  ;
+    background-repeat: no-repeat;
+    background-position: center right;
+    padding: 62px 0 74px 166px;
+}
+
+.site-form-heading{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 62px;
+    width: 360px;
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 14px;
+    
+    color: #FFFFFF;
+}
+
+.site-form-text{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    display: inline-block;
+    width: 334px;
+    margin-top: 0;
+    margin-bottom: 29px;
+    color: #949494;
+}
+
+.really-form{
+    width: 375px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+}
+
+.input-name{
+    margin-bottom: 14px;
+}
+
+
+
+.input-name,.input-email{
+    width: 375px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: #949494;
+    padding: 16px 22px 13px 22px;
+}
+
+.input-email{
+    border: 2px solid transparent;
+    margin-bottom: 14px;
+}
+
+.input-email:valid , .input-name:valid ,.input-textarea:valid{
+    border: 2px solid #00B031;
+    color:#00B031 ;
+    outline: none;
+}
+
+.input-email:invalid , .input-name:invalid , .input-textarea:invalid{
+    border: 2px solid #D81D04;
+    color:#D81D04; ;
+    outline: none;  
+}
+
+.input-textarea{
+    width: 375px;
+    resize: none;
+    min-height: 165px;
+    padding: 17px 22px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    color: #949494;
+    
+}
+
+.input-submit{
+    padding: 15px 50px;
+    background-color: #FFBD54;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+    border: none;
 }
