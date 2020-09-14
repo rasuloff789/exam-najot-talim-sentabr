@@ -285,6 +285,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    white-space: nowrap;
     transition: ease 0.5s background-color,
     0.5s ease color;
     padding: 19px 27px;
@@ -638,7 +639,7 @@ body{
     display: inline-block;
     text-decoration: none;
     padding: 15px 36px 16px 63px;
-    background-image: url('../images/money.svg');
+    background-image: url('../images/money.png');
     background-repeat: no-repeat;
     background-position: center left 30px;
     transition: background-color 0.4s ease;
@@ -654,7 +655,7 @@ body{
 .buttons-div .btn{
     border-radius: 3px;
     padding: 14px 37px 14px 64px;
-    background-image:url('../images/document.svg') ;
+    background-image:url('../images/document.png') ;
     background-repeat: no-repeat;
     background-position: center left 37px;
 }
@@ -677,7 +678,7 @@ body{
     background-image: url('../images/fishes.png'), linear-gradient(to left , rgba(2,2,2,0.6) , rgba(2,2,2,0.6))  ;
     background-repeat: no-repeat;
     background-position: center right;
-    padding: 62px 0 74px 166px;
+    padding: 62px 0 45px 166px;
 }
 
 .site-form-heading{
