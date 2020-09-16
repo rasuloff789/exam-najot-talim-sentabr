@@ -734,7 +734,7 @@ body{
     font-weight: normal;
     font-size: 16px;
     line-height: 20px;
-    /* identical to box height, or 125% */
+    outline: none;
     width: 335px;
     border: 2px solid transparent;
     display: flex;
@@ -946,8 +946,7 @@ transition: color ease 0.3s;
     padding: 62px 0 45px 116px;
     flex-grow: 1;
 }
-/* 8600 5103 3895 6829
-Umid */
+
 .site-form-heading{
     font-style: normal;
     font-weight: bold;
@@ -998,22 +997,21 @@ Umid */
     align-items: center;
     color: #949494;
     padding: 16px 22px 13px 22px;
+    outline: none;
 }
 
 .input-email{
     border: 2px solid transparent;
     margin-bottom: 14px;
 }
-/* .input-email_k[value=''] {
-    border-color: #949494;
-} */
-.input-email:valid , .input-name:valid ,.input-textarea:valid , .input-email_k:valid{
+
+.input-email:valid , .input-name:valid ,.input-textarea:not(:placeholder-shown):focus:valid , .input-email_k:valid{
     border: 2px solid #00B031;
     color:#00B031 ;
     outline: none;
 }
 
-.input-email:not([value=""]):invalid , .input-name:invalid , .input-textarea:invalid , .input-email_k:invalid{
+.input-email:not(:placeholder-shown):focus:invalid , .input-name:not(:placeholder-shown):focus:invalid , .input-textarea:not(:placeholder-shown):focus:invalid , .input-email_k:not(:placeholder-shown):focus:invalid{
     border: 2px solid #D81D04;
     color:#D81D04; ;
     outline: none;  
@@ -1033,6 +1031,7 @@ Umid */
     align-items: center;
     margin-bottom: 30px;
     color: #949494;
+    outline: none;
     
 }
 
@@ -1050,11 +1049,13 @@ Umid */
 .site_footer{
     background-color: #F3F3F3;
     border: 1px solid #EBEBEB;
+    padding: 54px 0 23px 0;
 }
 
 .site_footer .container{
     display: flex;
     align-items: center;
+    
 }
 
 .site_footer-left{
