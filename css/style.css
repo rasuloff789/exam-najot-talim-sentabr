@@ -1555,6 +1555,48 @@ color: #333333;
     background-image: url('../images/phone-vector.png');
     margin-bottom: 27px;
 }
+
+.contacts__location .container{
+    padding-top: 365px;
+    background-image: url('../images/our-location-bgi.png');
+    background-repeat: no-repeat;
+    background-position: top 100px right 75px;
+    position: relative;
+}
+
+.contacts__location_heading{
+font-style: normal;
+font-size: 48px;
+line-height: 62px;
+display: block;
+align-items: center;
+margin: 0 auto 60px auto;
+max-width: 500px;
+text-align: center;
+color: #333333;
+}
+
+.contacts__location-dog-poab{
+position: absolute;
+left: 0;
+top: 186px;
+/* transform: translateY(100%); */
+}
+
+.contacts__location_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.location-link{
+    flex-shrink: 1;
+}
+
+.company-img{
+    flex-shrink: 1;
+}
 /* contacts.html */
 
 @media only screen and (max-width:1350px)  {
