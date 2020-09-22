@@ -1447,6 +1447,112 @@ body{
 
 /* services.html */
 
+
+
+/* contacts.html */
+
+.contacts__hero{
+    padding: 110px 0  131px 0;
+    background-image: url('../images/dog-contacts-page.png');
+    background-repeat: no-repeat;
+    background-position: calc(50% + 550px) center;
+}
+
+
+
+.contacts__hero .hero__info{
+    margin: 0  auto 117px 0 ;
+}
+
+.contacts__address{
+    display: flex;
+
+}
+
+.contacts__company-adress{
+    width: 153px;
+    font-weight: 500;
+    font-style: normal;
+font-size: 16px;
+line-height: 21px;
+display: inline-flex;
+align-items: center;
+color: #333333;
+display: flex;
+flex-direction: column;
+margin-right: 118px;
+align-items: flex-start;
+}
+
+
+.contacts__company-adress::before , .contacts__worktime::before , .contacts__telnumbers::before{
+    height: 73px;
+    width: 78px;
+display: inline-block;
+content: '';
+background-repeat: no-repeat;
+background-position: top left;
+
+}
+
+.contacts__company-adress::before{
+    background-image: url('../images/location-vector.png');
+    margin-bottom: 30px;
+}
+
+.contacts__worktime{
+    display: flex;
+    flex-direction: column;
+margin-right: 118px;
+}
+
+.contacts_worktime-text{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 18px;
+    color: #333333;
+    margin: 0;
+}
+
+.contacts_worktime-text + .contacts_worktime-text{
+    margin-top: 8px;
+}
+
+.contacts_worktime-text span{
+    font-weight: 500;
+}
+
+.contacts__worktime::before{
+    background-image: url('../images/calendar-vector.png');
+    margin-bottom: 27px;
+}
+
+
+.contacts__telnumbers{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+.contacts__telnumber-link{
+    font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 16px;
+text-align: right;
+text-decoration: none;
+color: #333333;
+
+}
+
+.contacts__telnumbers::before{
+    background-image: url('../images/phone-vector.png');
+    margin-bottom: 27px;
+}
+/* contacts.html */
+
 @media only screen and (max-width:1350px)  {
     .site_header-adres_s .container{
         display: flex;
@@ -1527,6 +1633,8 @@ body{
     .company_worktime-text , .company_worktime-text + .company_worktime-text{
         margin-left: auto;
     }
+
+    
 }
 
 @media only screen and (max-width:1040px){
