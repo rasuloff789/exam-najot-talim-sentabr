@@ -1461,7 +1461,11 @@ body{
 
 
 .contacts__hero .hero__info{
-    margin: 0  auto 117px 0 ;
+    margin: 0  0 117px 0 ;
+    display: flex;
+    flex-direction: column;
+    margin-right: 0;
+    width: 100%;
 }
 
 .contacts__address{
@@ -1634,7 +1638,25 @@ color: #333333;
         margin-left: auto;
     }
 
+
+    .contacts__hero{
+        background-image: none;
+    }
+
     
+
+    .contacts__hero .hero__info{
+        display: flex;
+        flex-direction: column;
+      align-items: center;
+margin-left: auto;
+margin-right: auto;
+    }
+
+    .contacts__address{
+        justify-content: center;
+    }
+
 }
 
 @media only screen and (max-width:1040px){
@@ -1745,6 +1767,18 @@ color: #333333;
     .services__list{
         margin: 0;
     }
+
+    .contacts__address{
+        justify-content: space-between;
+    }
+
+    .contacts__company-adress{
+        margin: 0;
+    }
+
+    .contacts__worktime{
+        margin: 0;
+    }
 }
 
 
@@ -1759,7 +1793,34 @@ color: #333333;
         font-size: 14px;
         line-height: 1;
     }
+
+    .contacts__hero .hero__info{
+        margin-bottom: 50px;
+    }
     
+    .contacts__address{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contacts__address *{
+        align-items: center;
+    }
+
+    .contacts__company-adress{
+        margin-bottom: 30px;
+    }
+
+    .contacts__worktime{
+        margin-bottom: 30px;
+    }
+
+    .contacts__company-adress::before , .contacts__worktime::before , .contacts__telnumbers::before{
+        background-position: center  center;
+    }
+    
+
     .articles-list{
         flex-wrap: wrap;
         width: 100%;
