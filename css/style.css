@@ -36,6 +36,7 @@
 
 html{
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *,
@@ -207,13 +208,12 @@ body{
 .site_nav{
     background-color: #fff;
     width: 100%;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; */
 }
 
 .site_nav .container{
-    width: 100%;
     position: relative;
     display: flex;
     align-items: center;
@@ -263,21 +263,33 @@ body{
     font-size: 16px;
     line-height: 21px;
     padding: 19px 30px;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     transition: Background-color ease 0.5s; 
     color: #333333;
+}
+
+.nav-bar-button{
+    display: none;
+    background-color: transparent;
+    border: none;
 }
 
 .faq-link{
     text-transform: uppercase;
 }
 
-.site_nav-item-link-active{
+.site_nav-item-link-active::before{
+    content: '';
+    width: 19px;
+    height: 19px;
+    display: inline-block;
     background-image: url('../images/fish-icon.png');
     background-repeat: no-repeat;
-    background-size: 15px 15px;
-    background-position: center left 9px;
+    background-position: center center;
+    margin-right: 5px; 
 }
 
 .site_nav-item-link:hover{
@@ -951,7 +963,7 @@ body{
 .article-big{
     flex-direction: row;
     width: 640px ;
-
+    
 }
 
 .article-big .article-link{
@@ -1235,7 +1247,7 @@ body{
     
 }
 
-.site_footer-adres_s .company_telnumber{
+.site_header-adres_s .company_telnumber{
     margin-left: auto;
 }
 
@@ -1252,13 +1264,302 @@ body{
     color: #5C5C5C;
 }
 
-@media only screen and (max-width:900px) {
+
+
+/* services.html */
+
+.hero{
+    background-image: url('../images/green-bird.png');
+    background-repeat: no-repeat;
+    background-position: calc(50% + 455px) center;
+    background-size: 435px 435px;
+}
+
+.hero .container{
+    padding-top: 110px;
+    padding-bottom: 139px;
+}
+
+.hero__info{
+    max-width: 450px;
+    margin-left:112px ;
+}
+
+
+.hero__heading{
+    font-family: 'Futura PT';
+    margin-top: 0;
+    margin-bottom: 21px;
+    font-size: 70px;
+    line-height: 1;
+    color: #333333;
+}
+
+
+.hero__text{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 0;
     
+    display: flex;
+    align-items: center;
+    
+    color: #949494;
+}
+
+.services__list {
+    max-width: 100%;
+    display: flex;
+    margin: 0;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding: 0;
+    list-style-type: none;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.service{
+    width: 305px;
+    flex-shrink: 0;
+    margin:0 10px;
+    margin-bottom: 37px;
+    padding: 50px 22px  45px 50px ;
+    background-color: #fff;
+    border-radius: 5px 5px 0 0;
+    transition: filter ease 0.3s;
+}
+
+.service:nth-child(odd){
+    background-image: url('../images/service-bgi.png');
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+.service:nth-child(even){
+    background-image: url('../images/even-pet-bgi.png');
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+.service:hover{
+    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.2));
+}
+
+
+
+.service::before{
+    width: 90px;
+    height: 90px;
+    content: '';
+    display: inline-block;
+    margin-bottom: 21px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('../images/doctor.svg');
+}
+
+.service:nth-child(2):before{
+    background-image: url('../images/dog-with-girl.svg');
+}
+.service:nth-child(3):before{
+    background-image: url('../images/dog.svg');
+}
+.service:nth-child(4):before{
+    background-image: url('../images/dog-doging.svg');
+}
+.service:nth-child(5):before{
+    background-image: url('../images/Laboratory.svg');
+}
+.service:nth-child(6):before{
+    background-image: url('../images/two-dog.svg');
+}
+.service:nth-child(7):before{
+    background-image: url('../images/uzi.svg');
+}
+.service:nth-child(8):before{
+    background-image: url('../images/ukol.svg');
+}
+.service:nth-child(9):before{
+    background-image: url('../images/passport.svg');
+}
+.service:nth-child(10)::before{
+    background-image: url('../images/vaccine.svg');
+}
+.service:nth-child(11)::before{
+    background-image: url('../images/stom.svg');
+}
+.service:nth-child(12)::before{
+    background-image: url('../images/plus-chem.svg');
+}
+
+.service__name{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 34px;
+    width: 100%;
+    color: #333333;
+    white-space:pre-wrap;
+    margin-top: 0;
+    margin-bottom: 14px;
+    word-break: break-word;
+}
+
+.service__text{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: #949494;
+    margin-top: 0;
+    margin-bottom: 26px;
+}
+
+.service__link{
+    display: inline-block;
+    padding: 15px 30px;
+    color: #fff;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 450;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    transition: ease 0.5s background-color;
+}
+
+.service__link:hover.service__link:hover{
+    background-color: #000;
+}
+
+.service:nth-child(odd) .service__link{
+    background-color: #FFBD54;
+}
+.service:nth-child(even) .service__link{
+    background-color:  #78C0DE;
+    
+}
+
+
+
+/* services.html */
+
+@media only screen and (max-width:1350px)  {
+    .site_header-adres_s .container{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .site_nav .container{
+        justify-content: space-between;
+    }
+    .logo-link-container{
+        position: relative;
+        transform: none ;
+        width: auto;
+    }
+    
+    .site-logo-link{
+        display:block;
+    }
+    
+    .site-logo-link-img{
+        display: block;
+        height: auto;
+        width: 115px;
+    }
+    .site_nav-list{
+        padding: 0;
+        min-width: auto;
+    }
+    
+    
+    
+}
+
+@media only screen and (max-width:1250px)  {
+    .site_header-adres_s .container{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .site_nav .container{
+        justify-content: space-between;
+    }
+    .logo-link-container{
+        position: relative;
+        transform: none ;
+        width: auto;
+    }
+    
+    .site-logo-link{
+        display:block;
+    }
+    
+    .site-logo-link-img{
+        display: block;
+        height: auto;
+        width: 83px;
+    }
+    .site_nav-list{
+        padding: 0;
+        min-width: auto;
+    }
+    
+    .site_nav-item-link{
+        padding: 10px 14.5px;
+    }
+    .give-question{
+        padding: 10px 14.5px;
+        
+    }
+    
+}
+
+@media only screen and (max-width:1190px){
+    .company_worktime{
+        width: 170px;
+        flex-wrap: wrap;
+    }
+    .company_worktime-text , .company_worktime-text + .company_worktime-text{
+        margin-left: auto;
+    }
+}
+
+@media only screen and (max-width:1040px){
+    
+    .company_telnumbers-list{
+        width: 140px;
+        flex-wrap: wrap;
+    }
+    
+    .company_telnumber + .company_telnumber::before{
+        display: none;
+    }
+    
+}
+
+
+@media only screen and (max-width:900px) {
+    .hero{
+        background-image: none;
+    }
+    .hero__info{
+        margin: 0 auto;
+        
+    }
+    
+    .hero__heading{
+        text-align: center;
+    }
     .articles-list{
         flex-wrap: wrap;
         width: 100%;
         justify-content: space-between;
-
+        
     }
     
     .article{
@@ -1269,7 +1570,7 @@ body{
         flex-shrink: 0;
         flex-grow: 0;
         margin-bottom: 10px;
-
+        
     }
     
     
@@ -1297,7 +1598,7 @@ body{
         flex-grow: 0;
         margin-bottom: 10px ;
     }
-
+    
     .article-big .small-article{
         flex-grow: 0;
     }
@@ -1306,10 +1607,50 @@ body{
         height: 60px;
     }
     
-   
+    
 }
 
+@media only screen and (max-width:780px){
+    
+    .company_adress{
+        font-size: 12px;
+    }
+    
+    .company_telnumbers-list{
+        width: 100px;
+        margin: 0 20px 0 20px;
+        
+    }
+    
+    .company_telnumber-link{
+        font-size: 10px;
+    }
+    
+    .company_worktime{
+        width: 130px;
+        margin: 0;
+    }
+    
+    .company_worktime-text{
+        font-size: 10px;
+    }
+    .services__list{
+        margin: 0;
+    }
+}
+
+
+
 @media only screen and (max-width:600px){
+    .hero__heading{
+        margin-bottom: 16px;
+        font-size: 45px;
+        line-height: 1;
+    }
+    .hero__text{
+        font-size: 14px;
+        line-height: 1;
+    }
     
     .articles-list{
         flex-wrap: wrap;
@@ -1344,8 +1685,57 @@ body{
         width: 100%;
         background-color: #fff;
     }
-
+    
     .article-big .small-article{
         width: 100%;
     }
+}
+
+
+@media only screen and (max-width:550px){
+    
+    .navbar-button-div{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .site_nav-list{
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        height: 0;
+        transform: translateX(-50%);
+    }
+    
+    .nav-bar-button{
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        content: '';
+        background-image: url('../images/menu.png');
+        background-repeat: no-repeat;
+        background-size: 15px 15px;
+        background-position: center center;
+        border: none;
+        background-color: #fff;
+        padding: 0;
+    }
+    
+    .site_nav-list-item-link{
+        text-align: center;
+    }
+    .navbar-button-div:focus   .site_nav-list{
+        height: auto;
+    }
+    
+    
+    
+    
+    .site_nav-item-link{
+        background-color: #fff;
+    }
+    
 }
