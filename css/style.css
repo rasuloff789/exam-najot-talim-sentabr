@@ -1654,7 +1654,46 @@ body{
     transition: color ease 0.2s;
 }
 .about__article-text-link:hover{
-    color: #ccc; 
+    color:#78C0DE;
+}
+
+.about__description .container{
+    padding-top: 130px;
+    padding-bottom: 205px;
+    background-size: 800px auto;
+    background-image: url('../images/dush-dog-bgi.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.about__description-content{
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin-left: 112px;
+    margin-right: auto;
+}
+
+.about__description-text{
+    font-size: 16px;
+    line-height: 20px;
+    max-width: 100%;
+    color: #949494;
+    margin: 0;
+}
+
+.about__description-text + .about__description-text{
+    margin-top: 19px;
+}
+
+.about__description-link{
+    text-decoration: none;
+    color:#78C0DE;
+    transition: color ease 0.2s;
+}
+
+.about__description-link:hover{
+    color:  #FFBD54;
 }
 
 /* about.html */
@@ -1772,6 +1811,9 @@ body{
         margin-right: auto;    
         text-align: center;
     }
+    .about__description .container{
+        background-size: 600px auto;
+    }
     /* about.html */
 }
 
@@ -1809,6 +1851,10 @@ body{
         background-position: left bottom, right top ;
         /* background-size:auto 100px , auto 100px; */
     }
+
+    .about__description .container{
+        background-size: 500px auto;
+    }
     /* about.html */
 }
 
@@ -1832,11 +1878,11 @@ body{
         align-items: center;
         background-size:auto 300px , auto 235px;
     }
-
+    
     .about__article{
         padding-top: 30px;
     }
-
+    
     .about__article-img{
         width: 70%;
         margin-right: auto;
@@ -1850,14 +1896,29 @@ body{
     
     .about__article-text{
         max-width: 900px;
-      
+        
         padding: 60px 40px;
         margin-left: auto;
         text-align: center;
         margin-right: auto;
     }
     
-    
+    .about__description .container{
+      padding-top: 200px;
+      padding-bottom: 50px;
+        background-size: auto 200px;
+        background-position: center top;
+    }
+
+    .about__description-content{
+        max-width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .about__description-text{
+        font-size: 18px;
+        text-align: center;
+    }
     /* about.html */
 }
 
@@ -1946,15 +2007,15 @@ body{
         height: auto;
     }
     
-
+    
     /* about.html */
-
+    
     .about__article-text{
         font-size: 18px;
     }
-
-
- /* about.html */
+    
+    
+    /* about.html */
 }
 
 @media only screen and (max-width:780px){
@@ -2158,12 +2219,19 @@ body{
         font-size: 30px;
     }
     
-
-     .about__article-text{
+    
+    .about__article-text{
         font-size: 16px;
     }
-
-
+    
+    .about__article-img{
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+    
+    
+    
     /* about.html */
     
 }
