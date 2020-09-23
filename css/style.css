@@ -1627,7 +1627,30 @@ top: 186px;
         padding: 0;
         min-width: auto;
     }
+
+    .contacts__location .container{
+    display: flex;
+    flex-direction: column;
     
+        align-items: center;
+    
+    }
+    
+.contacts__location_heading{
+    margin-bottom: 400px;
+}
+    .contacts__location_div{
+        flex-wrap: wrap;
+    }
+
+    .contacts__location-dog-poab{
+       left: 50%;
+       transform: translateX(-50%) translateY(100%);
+    }
+
+    .location-link{
+        margin-bottom: 20px;
+    }
     
     
 }
@@ -1778,7 +1801,26 @@ margin-right: auto;
     .article-big .small-article .article-text{
         height: 60px;
     }
+
+    .contacts__location .container{
+        background-size: 100% auto;
+        background-position: center top;
+    }
+
+    .contacts__location_div{
+        flex-direction: column;
+        align-items: center;
+    }
     
+    .location-img{
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .company-img{
+width: 100%;
+height: auto;
+    }
     
 }
 
@@ -1821,6 +1863,8 @@ margin-right: auto;
     .contacts__worktime{
         margin: 0;
     }
+
+    
 }
 
 
@@ -1899,6 +1943,20 @@ margin-right: auto;
     
     .article-big .small-article{
         width: 100%;
+    }
+
+    .contacts__location .container{
+        background-position: center top;
+        padding-top: 160px ;
+    }
+
+.contacts__location_heading{
+    margin-bottom: 30px;
+    font-size: 35px;
+}
+
+    .contacts__location-dog-poab{
+        display: none;
     }
 }
 
