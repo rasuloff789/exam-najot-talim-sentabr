@@ -1603,12 +1603,12 @@ body{
 /* about.html */
 
 .about__top-section .container{
-padding-top: 110px;
-padding-bottom: 310px;
-background-image: url('../images/about-clinic-bgi.png') , url('../images/bgi-group.png');
-background-repeat: no-repeat , no-repeat;
-background-position: right 70px bottom, left 80px bottom ;
-background-size:450px auto , 670px auto;
+    padding-top: 110px;
+    padding-bottom: 310px;
+    background-image: url('../images/about-clinic-bgi.png') , url('../images/bgi-group.png');
+    background-repeat: no-repeat , no-repeat;
+    background-position: right 70px bottom, left 80px bottom ;
+    background-size:450px auto , 670px auto;
 }
 
 .about__top-section .hero__info{
@@ -1618,6 +1618,43 @@ background-size:450px auto , 670px auto;
 .about__top-section .hero__text{
     max-width: 450px;
     display: inline-block;
+}
+
+.about__article{
+    background-color: rgba(243, 243, 243,0.6);
+    
+}
+
+.about__article-container{
+    display: flex;
+}
+
+.about__article-img{
+    width: 49%;
+    height: auto;
+    object-fit: cover;
+    flex-shrink: 0;
+    object-position: center top;
+}
+
+.about__article-text{
+    flex-grow: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 128px 0 140px 95px;
+    font-size: 20px;
+    line-height: 26px;
+    color: #949494;
+}
+
+.about__article-text-link{
+    color:  #FFBD54;
+    text-decoration: none;
+    line-height: 1;
+    transition: color ease 0.2s;
+}
+.about__article-text-link:hover{
+    color: #ccc; 
 }
 
 /* about.html */
@@ -1673,9 +1710,14 @@ background-size:450px auto , 670px auto;
     .location-link{
         margin-bottom: 20px;
     }
-
     
- 
+    /* about.html */
+    .about__article-text{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    /* about.html */
+    
 }
 
 @media only screen and (max-width:1250px)  {
@@ -1714,8 +1756,8 @@ background-size:450px auto , 670px auto;
         padding: 10px 14.5px;
         
     }
-      /* about.html */
-      .about__top-section .container{
+    /* about.html */
+    .about__top-section .container{
         padding-top: 100px;
         padding-bottom: 100px;
         background-position: left bottom, right center ;
@@ -1723,13 +1765,13 @@ background-size:450px auto , 670px auto;
         flex-direction: column;
         align-items: center;
         background-size:auto 300px , 300px auto;
-        }
-
-        .about__top-section .hero__info{
-            margin-left: auto;    
-            margin-right: auto;    
-            text-align: center;
-            }
+    }
+    
+    .about__top-section .hero__info{
+        margin-left: auto;    
+        margin-right: auto;    
+        text-align: center;
+    }
     /* about.html */
 }
 
@@ -1766,7 +1808,7 @@ background-size:450px auto , 670px auto;
         padding-bottom: 100px;
         background-position: left bottom, right top ;
         /* background-size:auto 100px , auto 100px; */
-        }
+    }
     /* about.html */
 }
 
@@ -1780,6 +1822,7 @@ background-size:450px auto , 670px auto;
     .company_telnumber + .company_telnumber::before{
         display: none;
     }
+    /* about.html */
     .about__top-section .container{
         padding-top: 235px;
         padding-bottom: 300px;
@@ -1788,7 +1831,34 @@ background-size:450px auto , 670px auto;
         flex-direction: column;
         align-items: center;
         background-size:auto 300px , auto 235px;
-        }
+    }
+
+    .about__article{
+        padding-top: 30px;
+    }
+
+    .about__article-img{
+        width: 70%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    .about__article-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .about__article-text{
+        max-width: 900px;
+      
+        padding: 60px 40px;
+        margin-left: auto;
+        text-align: center;
+        margin-right: auto;
+    }
+    
+    
+    /* about.html */
 }
 
 
@@ -1876,6 +1946,15 @@ background-size:450px auto , 670px auto;
         height: auto;
     }
     
+
+    /* about.html */
+
+    .about__article-text{
+        font-size: 18px;
+    }
+
+
+ /* about.html */
 }
 
 @media only screen and (max-width:780px){
@@ -2012,12 +2091,12 @@ background-size:450px auto , 670px auto;
     .contacts__location-dog-poab{
         display: none;
     }
-/* about.html */
-        .about__top-section .container{
-            background-size:auto 300px , 100% auto;
-        }
-
-        /* about.html */
+    /* about.html */
+    .about__top-section .container{
+        background-size:auto 300px , 100% auto;
+    }
+    
+    /* about.html */
 }
 
 
@@ -2066,18 +2145,25 @@ background-size:450px auto , 670px auto;
     .site_nav-item-link{
         background-color: #fff;
     }
-
     
- /* about.html */
- .about__top-section .container{
-    padding-top: 100px;
-    padding-bottom: 200px;  
-    background-size:auto 200px , auto 100px;
+    
+    /* about.html */
+    .about__top-section .container{
+        padding-top: 100px;
+        padding-bottom: 200px;  
+        background-size:auto 200px , auto 100px;
+    }
+    
+    .about__top-section .hero__info{
+        font-size: 30px;
+    }
+    
+
+     .about__article-text{
+        font-size: 16px;
     }
 
-    .about__top-section .hero__info{
-       font-size: 30px;
-    }
-/* about.html */
+
+    /* about.html */
     
 }
